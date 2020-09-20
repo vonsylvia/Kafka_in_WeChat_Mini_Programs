@@ -1,0 +1,22 @@
+server:
+  port: 443
+  ssl:
+    key-store:
+    key-password:
+
+template:
+  templates:
+    - {"templateId":"1","templateFilePath":"/Users/kafka_study/src/main/resources/template/template.json","active":true}
+    - {"templateId":"2","templateFilePath":"/Users/kafka_study/src/main/resources/template/template.json","active":false}
+  template-result-type: 0 # 0-文件获取 1-数据库获取 2-ES
+  template-result-file-path: "/Users/kafka_study/src/main/resources/template/templateResult.json"
+
+# 尽量不要将kafka写为第一句，因为如果后面要引入starter的包的话会读到同名kafka
+wechat:
+  kafka:
+    bootstrap_servers: "xxx.xxx.xxx.xxx:9092"
+    acks_config: "all"
+    partitioner_class: "com.imooc.mykafka.kafka_study.producer.SamplePartition"
+
+logging:
+  config: classpath:logback.xml

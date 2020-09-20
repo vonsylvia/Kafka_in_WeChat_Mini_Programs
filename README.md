@@ -1,2 +1,15 @@
-# Kafka_in_WeChat_Mini_Programs
-Learn Kafka through WeChat Mini Programs practice
+# 介绍
+本项目主要是学习 Kafka producer 过程中的实践项目，实现了一个问卷调查微信小程序。
+
+通过 HTTPS 访问，微信小程序的问卷后端服务获取问卷模板，客户端将问卷结果同步到后端，后端再向客户端统计展示结果。
+
+# 准备工作
+- 预定义小程序作用并开发后端服务
+- 后端服务增加 HTTPS 支持
+- 注册个人小程序并发布前端服务
+
+# 运行环境
+开发语言为 Java，框架为 SpringBoot 2.2.9.RELEASE，运行于阿里云服务器，系统为 CentOS 7
+
+# 备注
+由于个人隐私，本项目将个人服务器地址与 SSL 证书移除，需要 SSL 证书的朋友可以去阿里云申请，免费的
